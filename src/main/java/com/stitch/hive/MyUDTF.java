@@ -19,10 +19,11 @@ public class MyUDTF extends GenericUDTF {
         //1.定义输出数据的列名和类型
         List<String> fieldNames = new ArrayList<String>();
         List<ObjectInspector> fieldOIs = new ArrayList<ObjectInspector>();
+
         //2.添加输出数据的列名和类型
         fieldNames.add("lineToWord");
-
         fieldOIs.add(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
+
         return ObjectInspectorFactory.getStandardStructObjectInspector(fieldNames, fieldOIs);
     }
     @Override
